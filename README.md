@@ -5,3 +5,5 @@
 4. Potentially change questions if we can come up with better ones
 5. Update instructions
 6. Make mouse dissapear during trials
+7. fix retrocue code
+8. make the code more modular to switch between tasks

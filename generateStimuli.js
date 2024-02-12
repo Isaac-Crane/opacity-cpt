@@ -344,7 +344,7 @@ function generatePracticeStimuli(){
 		{type:'female', path: 'images/female/CFD-AF-200-228-N.jpg'},
 		{type:'female', path: 'images/female/CFD-LF-200-058-N.jpg'},
 		{type:'female', path: 'images/female/CFD-WF-001-009-HO.jpg'},
-		{type:'female', path: 'images/female/CFD-BF-001-026-A.jpg'},
+		{type:'female', path: 'images/female/CFD-BF-002-001-N.jpg'},
 		{type: 'female', path: 'images/female/CFD-IF-601-519-N.jpg'},
 	]
 	shuffledSceneArray = shuffle(scenes)

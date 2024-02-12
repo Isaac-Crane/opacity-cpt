@@ -7,7 +7,7 @@ var probe1 = {
 	<p>My thoughts just now were related to the task</p>
 	`,
 	labels: ['Not at all', 'Completely'],
-
+	trial_duration: 20000
 }
 
 var probe2 = {
@@ -16,7 +16,7 @@ var probe2 = {
 	<p>My thoughts just now were related to my internal thoughts</p>
 	`,
 	labels: ['Not at all', 'Completely'],
-
+	trial_duration: 20000
 }
 
 call_probes = {
@@ -203,7 +203,7 @@ else{
 		secondFrequentType = "female"
 	}
 }
-var opacity = 0.3
+var opacity = 0.5
 var allStimuli = generateRandomStimuli(relevantType, frequentType, secondFrequentType)
 var randomizedStimuli = allStimuli[0]
 var memStimuli = allStimuli[1]
@@ -212,6 +212,10 @@ preloadArray = []
 totalPracticeTrials = 10
 randomizedPracticeStimuli = generatePracticeStimuli()
 console.log(memStimuli.length)
+for (i = 0; i < randomizedStimuli.length; i++){
+	preloadArray.push(randomizedStimuli[i].Face)
+	preloadArray.push(randomizedStimuli[i].Scene)
+}
 
 var preload = {
 	type: 'preload',
@@ -1152,7 +1156,7 @@ probe_positions_sorted = probe_positions.sort(function(a, b){return a - b})
 probe_positions_sorted.unshift(0)
 probe_positions_sorted.push(randomizedStimuli.length-1)
 console.log(probe_positions_sorted)
-var timeline_order = [timeline_fullscreen, display_consent, demographics1, demographics2, preload, instructions, practice_instructions, practice_loop, get_ready]
+var timeline_order = [preload, timeline_fullscreen, display_consent, demographics1, demographics2, instructions, practice_instructions, practice_loop, get_ready]
 for (i = 0; i < probe_positions_sorted.length; i++){
 	var overlay_setup = {
 		timeline: [overlay_task, fill_in_if_node],

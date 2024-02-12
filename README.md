@@ -8,6 +8,3 @@
 7. fix retrocue code
 8. make the code more modular to switch between tasks
 9. neutral faces
-10. make faces less dominant in the frame in terms of opacity
-11. make preload work
-12. max time limit for probes
